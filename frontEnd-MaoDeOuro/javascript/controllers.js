@@ -1,9 +1,17 @@
 angular.module('starter.controllers', [])
 
-// Login
-.controller('LangePageController', function($scope, $state) {
-
+.controller('HomeController', function($rootScope, $location) {
+    $rootScope.activetab = $location.path();
 })
 
-.controller('HeaderController', function($scope, $state) {
-});
+.controller('SobreController', function($rootScope, $location) {
+    $rootScope.activetab = $location.path();
+})
+
+.controller('PromocaoController', function($rootScope, $location) {
+    $rootScope.activetab = $location.path();
+})
+
+.controller('ContatosController', function($rootScope, $location) {
+    $rootScope.activetab = $location.path();
+})

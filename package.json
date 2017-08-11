@@ -9,7 +9,6 @@
   "author": "Paulo Felipe",
   "license": "ISC",
   "dependencies": {
-    "angular-ui-router": "^1.0.3",
     "body-parser": "^1.17.2",
     "directory": "^0.1.0",
     "express": "^4.15.4",
