@@ -1,0 +1,35 @@
+#icon-footer ul li a i{
+  font-size: 4rem;
+}
+
+#icon-footer ul li{
+  margin: 0.5rem;
+}
+
+#icon-footer{
+  margin-top: 2.8rem;
+}
+
+.brand-logo{
+  margin-left: 2rem;
+}
+
+.nav-wrapper ul{
+  margin-right: 2rem;
+}
+#icon-footer-contact a{
+   color: #000;
+}
+
+#index-content p{
+  margin: 0.2rem;
+}
+
+#index-content a{
+  margin-right: 0.5rem;
+}
+
+#index-content{
+  display: flex;
+  margin-top: 1rem;
+}

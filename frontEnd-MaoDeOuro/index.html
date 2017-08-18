@@ -1,71 +1,98 @@
 <!DOCTYPE html>
-<html ng-app="starter">
-  <head>
-        <link rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="content-language" content="pt-br" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <meta charset="utf-8">
-        <title>Salão de Beleza - Mão de Ouro</title>
-  </head>
+<html>
+<head>
+  <link rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contatos.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-br" />
+  <meta charset="utf-8">
+  <title>Salão de Beleza - Mão de Ouro</title>
+</head>
 
-  <!-- apply our angular app to our site -->
-    <body>
-      <header>
-        <div class="navbar-fixed">
-          <nav>
-            <div class="nav-wrapper amber accent-2">
-              <a href="/" class="brand-logo black-text">Logo</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li ng-class="{active: activetab == '/sobre'}"><a class="black-text" href="/sobre">Sobre</a></li>
-                <li ng-class="{active: activetab == '/promocao'}"><a class="black-text" href="/promocao">Promoção</a></li>
-                <li ng-class="{active: activetab == '/contato'}"><a class="black-text" href="/contato">Contato</a></li>
-              </ul>
-            </div>
-          </nav>
+<!-- apply our angular app to our site -->
+<body ng-app="starter">
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper amber accent-3">
+          <a href="/" class="brand-logo black-text">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li ng-class="{active: activetab == '/sobre'}"><a class="black-text" href="/sobre">Sobre</a></li>
+            <li ng-class="{active: activetab == '/promocao'}"><a class="black-text" href="/promocao">Promoção</a></li>
+            <li ng-class="{active: activetab == '/contato'}"><a class="black-text" href="/contato">Contato</a></li>
+          </ul>
         </div>
-      </header>
+      </nav>
+    </div>
+  </header>
 
-      <div ng-view>
+  <div ng-view>
+  </div>
+
+  <footer class="page-footer amber accent-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="black-text">Entre em contatos</h5>
+
+          <div id="index-content">
+            <a href="tel:1132949062" class="material-icons black-text">local_phone</a>
+            <p class="black-text">(11) 3294-9062</p>
+          </div>
+
+          <div id="index-content">
+            <a href="tel:11983279599" class="material-icons black-text">phone_iphone</a>
+            <p class="black-text">(11) 98327-9599</p>
+          </div>
+
+          <div id="index-content">
+            <a href="mailto:rita.cassia.s09@gmail.com" class="material-icons black-text">email</a>
+            <p class="black-text">Mande-me um e-mail</p>
+          </div>
+        </div>
+        <div id="icon-footer" class="col l4 offset-l2 s12">
+          <ul class="left">
+            <div class="col l4 s4">
+              <li>
+                <a class="black-text text-lighten-3" target="_blank" href="#!"><i class="fa fa-facebook"></i></a>
+              </li>
+            </div>
+            <div class="col l4 s4">
+              <li>
+                <a class="black-text" target="_blank" href="#!"><i class="fa fa-instagram"></i></a>
+              </li>
+            </div>
+            <div class="col l4 s4">
+              <li>
+                <a class="black-text" target="_blank" href="#!"><i class="fa fa-twitter"></i></a>
+              </li>
+            </div>
+          </ul>
+        </div>
       </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container black-text center">
+        © 2017 Mão de Ouro
+      </div>
+    </div>
+  </footer>
 
-      <footer class="page-footer amber accent-2">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="black-text">Footer Content</h5>
-              <p class="black-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="black-text">Links</h5>
-              <ul>
-                <li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="black-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="black-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="black-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container black-text">
-          © 2014 Copyright Text
-          <a class="black-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
-        </div>
-      </footer>
+  <!-- Inicializacao do JQuery e MaterializeJS -->
+  <script type="text/javascript" src="javascript/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="materialize/js/materialize.js"></script>
 
-      <!-- Inicializacao do JQuery e MaterializeJS -->
-      <script type="text/javascript" src="javascript/jquery-3.2.1.js"></script>
-      <script type="text/javascript" src="materialize/js/materialize.js"></script>
+  <!-- Inicializacao do Angular e Angular-Router -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
-      <!-- Inicializacao do Angular e Angular-Router -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-
-      <!-- Inicializacao do APP e Controllers-->
-      <script src="javascript/app.js"></script>
-      <script src="javascript/controllers.js"></script>
-    </body>
+  <!-- Inicializacao do APP e Controllers-->
+  <script src="javascript/app.js"></script>
+  <script src="javascript/controllers.js"></script>
+</body>
 </html>
